@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular Regular'), local('BebasNeueRegular'),
+        url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('../fonts/BebasNeueRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 *{
   box-sizing: border-box;  /*  позволяет правильно считать ширину и высоту элементов*/
 }
@@ -47,4 +57,70 @@ font-size: 17px;
 line-height: 20px;
 color: #fff;
 text-decoration: none;
+}
+.main {
+    margin: auto;
+    max-width: 1280px;
+    margin: auto;
+    
+    display: flex;/* чтобы счетчик переместился в право и не внизу */
+}
+.main-info {
+    flex-grow: 1;/* счетчик займет все свободное место */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-image{
+    margin-top: 58px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.home-image path {
+opacity: 0;/* стаим прозрачгость для синего фона на картинке  */
+cursor: pointer;/* при наведении курсора появляется пальчик */
+}
+.home-image path:hover {
+    opacity: 1;/* убирает прозрачность при наведении */
+}
+.counter-group{
+display: flex;
+flex-direction: column;/* чтобы элементы встали друг за другом по вертикали */
+align-items: center;
+}
+.counter-button {
+    cursor: pointer;
+    background-color: #fff;
+    border: none; /* убрать обводку кнопок */
+}
+.counter-down {
+transform: rotateX(180deg);
+}
+.main-title {
+font-family: 'Bebas Neue Regular',  sans-serif;
+margin-top: 126px;
+font-style: normal;
+font-size: 34px;
+line-height: 34px;
+text-align: center;
+text-transform: uppercase;
+color: #635854;
+}
+.counter {
+    font-family: 'Bebas Neue Regular',  sans-serif;
+    color: #635854;
+    font-size: 124px;
+    
+}
+.button-primary{
+    margin-bottom: 67px;
+    background: #3596F5;
+border-radius: 6px;
+color: #fff;
+border: none;
+padding: 16px 36px;
+cursor: pointer;
 }
